@@ -1,0 +1,209 @@
+@charset "utf-8";
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 10
+   Case Problem 4
+   
+
+   VoterWeb General Style Sheet
+
+   Filename: vw_styles.css
+   
+*/
+
+/* HTML and Body Styles */
+
+html {
+  background: white;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  background: #f2e6ca;
+  max-width: 1200px;
+  min-width: 420px;
+  margin: 0px auto;
+  border: 1px solid rgb(221, 221, 221);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+/* Header Styles */
+
+body > header {
+  width: 100%;
+}
+
+img#logoImg {
+  display: block;
+  width: 100%;
+}
+
+/* Horizontal Navigation Styles */
+
+nav.horizontal ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: rgb(51, 51, 51);
+  height: 40px;
+}
+
+nav.horizontal ul li {
+  -webkit-flex: 1 1 0px;
+  flex: 1 1 0px;
+  margin: 10px;
+}
+
+nav.horizontal ul li a {
+  color: rgb(211, 211, 255);
+  display: block;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 50% 0%;
+}
+
+nav.horizontal ul li a:hover,
+nav.horizontal ul li a:active {
+  color: rgb(255, 211, 211);
+  text-shadow: 0px 0px 2px white, 0px 0px 8px white;
+}
+
+/* Vertical Navigation Styles */
+
+nav.vertical {
+  background: linear-gradient(
+    to bottom right,
+    rgb(151, 0, 51),
+    rgb(51, 0, 151)
+  );
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  -webkit-flex: 0 0 300px;
+  flex: 0 0 300px;
+}
+
+nav.vertical ul {
+  -moz-column-width: 120px;
+  -webkit-column-width: 120px;
+  column-width: 120px;
+
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+}
+
+nav.vertical ul li {
+  line-height: 1.8em;
+  font-size: 1.2em;
+}
+
+nav.vertical ul li a {
+  color: rgb(211, 211, 211);
+}
+
+nav.vertical ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Section Styles */
+
+section {
+  -webkit-flex: 1 1 500px;
+  flex: 1 1 500px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+section > h1 {
+  font-size: 3em;
+  letter-spacing: 0.12em;
+  line-height: 1.4em;
+  font-weight: normal;
+  color: rgb(42, 57, 144);
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times,
+    "Times New Roman", serif;
+  text-shadow: rgb(51, 51, 51) 3px 3px 10px;
+  margin: 10px 0px 20px 0px;
+}
+
+/* Voter Table Styles */
+
+section table {
+  margin: 10px 0px 5px 0px;
+  border-collapse: collapse;
+}
+
+section table caption {
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times,
+    "Times New Roman", serif;
+  color: rgb(42, 57, 144);
+  font-size: 1.9em;
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+section table th,
+section table td {
+  text-align: left;
+}
+
+section table tr:first-of-type th:last-of-type {
+  text-align: right;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+section table tr td:first-of-type {
+  width: 150px;
+}
+
+section table tr td:nth-of-type(2) {
+  width: 150px;
+  text-align: right;
+  padding-right: 7px;
+}
+
+td.dem,
+td.rep,
+td.ind {
+  width: 2px;
+}
+
+td.dem {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+td.rep {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+td.ind {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+/* Footer Styles */
+
+footer {
+  width: 100%;
+}
+
+footer p {
+  color: rgb(211, 211, 255);
+  font-size: 0.9em;
+  text-align: center;
+  background-color: rgb(51, 51, 51);
+  margin: 0px;
+  padding: 10px 0px;
+}
